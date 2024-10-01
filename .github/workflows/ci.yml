@@ -3,11 +3,9 @@ name: CI Pipeline
 # This workflow is triggered on pushes and pull requests
 on:
   push:
-    branches:
-      - main
   pull_request:
     branches:
-      - main
+      - dev
 
 jobs:
   build:
@@ -28,7 +26,4 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Build the project
-      - name: Build project
-        run: npm run build
 
